@@ -24,7 +24,7 @@ displays processes in a window and lets you sort and manipulate them.
 %{__make}
 
 %install
-rm -r $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install -s qps $RPM_BUILD_ROOT%{_bindir}
