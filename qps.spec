@@ -1,5 +1,5 @@
 %define name	qps
-%define ver	1.6
+%define ver	1.7
 %define rel	1
 
 Summary: A visual process manager
