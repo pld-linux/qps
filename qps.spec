@@ -27,7 +27,7 @@ displays processes in a window and lets you sort and manipulate them.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -s qps $RPM_BUILD_ROOT%{_bindir}
+install qps $RPM_BUILD_ROOT%{_bindir}
 
 install qps.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
