@@ -13,7 +13,9 @@ Group(pt):	X11/Aplicações
 Vendor:		Mattias Engdegard <f91-men@nada.kth.se>
 Source0:	ftp://ptah.lnf.kth.se/pub/qps/%{name}-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
+Patch1:		%{name}-time.patch
 URL:		http://www.student.nada.kth.se/~f91-men/qps/
+BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -31,6 +33,7 @@ oraz manipulowaæ nimi.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make}
