@@ -1,10 +1,15 @@
 Summary:	A visual process manager
+Summary(pl):	Wizualny menad¿er procesów
 Name:		qps
 Version:	1.9.7
 Release:	1
 License:	GPL
-Group:		X11/Utilities
-Group(pl):	X11/Narzêdzia
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(es):	X11/Aplicaciones
+Group(pl):	X11/Aplikacje
+Group(pt_BR):	X11/Aplicações
+Group(pt):	X11/Aplicações
 Vendor:		Mattias Engdegard <f91-men@nada.kth.se>
 Source0:	ftp://ptah.lnf.kth.se/pub/qps/%{name}-%{version}.tar.gz
 URL:		http://www.student.nada.kth.se/~f91-men/qps/
@@ -17,6 +22,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Qps is a visual process manager, an X11 version of "top" or "ps" that
 displays processes in a window and lets you sort and manipulate them.
 
+%description -l pl
+Qps to wizualny menad¿er procesów, czyli wersja X11 programów "top"
+lub "ps", wy¶wietlaj±cy procesy w okienku i pozwalaj±cy je sortowaæ
+oraz manipulowaæ nimi.
+
 %prep
 %setup -q
 
@@ -28,17 +38,15 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install qps $RPM_BUILD_ROOT%{_bindir}
-
 install qps.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf CHANGES README \
-	$RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf CHANGES README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README
+%doc CHANGES.gz README.gz
 %attr(755,root,root) %{_bindir}/qps
 %{_mandir}/man1/*
