@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications
 Vendor:		Mattias Engdegard <f91-men@nada.kth.se>
 Source0:	ftp://ptah.lnf.kth.se/pub/qps/%{name}-%{version}.tar.gz
+# Source0-md5:	2460d5d380466ff186d749e3cf89164e
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-time.patch
 URL:		http://www.student.nada.kth.se/~f91-men/qps/
