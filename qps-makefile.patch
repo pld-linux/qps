@@ -1,0 +1,30 @@
+--- ./Makefile.org	Tue Apr  4 18:34:06 2000
++++ ./Makefile	Fri Dec  7 22:32:14 2001
+@@ -4,7 +4,8 @@
+ # First, make sure INCLUDES and LDPATHS lines contain paths to the include
+ # and library directories for Qt.
+ #
+-INCLUDES=-I$(QTDIR)/include
++QTDIR=/usr/X11R6
++INCLUDES=-I$(QTDIR)/include/qt
+ LDPATHS=-L$(QTDIR)/lib
+ 
+ #
+@@ -20,7 +21,7 @@
+ # if moc (the Qt meta object compiler) is not in your $PATH, you might need
+ # to specify its location here.
+ #
+-MOC=$(QTDIR)/bin/moc
++MOC=moc
+ 
+ #
+ # Your C++-compiler here.
+@@ -32,7 +33,7 @@
+ # line. Qps runs on MOSIX systems without it, but this gives it added
+ # functionality. See http://www.mosix.cs.huji.ac.il/ for more info.
+ #
+-#MOSIX=-DMOSIX
++MOSIX=-DMOSIX
+ 
+ # You may need -fno-rtti in CXXFLAGS to compile with recent gcc/egcs versions.
+ CXXFLAGS= -g $(MOSIX) -O2 -Wall -W -Wconversion $(INCLUDES) 
