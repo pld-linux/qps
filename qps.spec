@@ -12,6 +12,7 @@ Group(pt_BR):	X11/Aplicações
 Group(pt):	X11/Aplicações
 Vendor:		Mattias Engdegard <f91-men@nada.kth.se>
 Source0:	ftp://ptah.lnf.kth.se/pub/qps/%{name}-%{version}.tar.gz
+Patch0:		%{name}-makefile.patch
 URL:		http://www.student.nada.kth.se/~f91-men/qps/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,6 +30,7 @@ oraz manipulowaæ nimi.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make}
@@ -47,6 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.gz README.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/qps
 %{_mandir}/man1/*
