@@ -13,8 +13,6 @@ URL:		http://www.student.nada.kth.se/~f91-men/qps/
 BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Qps is a visual process manager, an X11 version of "top" or "ps" that
