@@ -1,43 +1,44 @@
-%define name	qps
-%define ver	1.7
-%define rel	1
-
-Summary: A visual process manager
-Name: %name
-Version: %ver
-Release: %rel
-Copyright: GPL
-Group: X11/Utilities
-Source: ftp://ptah.lnf.kth.se/pub/qps/qps-%{ver}.tar.gz
-Patch: qps-Makefile.patch
+Summary:	A visual process manager
+Name:		qps
+Version:	1.9.7
+Release:	1
+License:	GPL
+Group:		X11/Utilities
+Group(pl):	X11/Narzêdzia
+Vendor:		Mattias Engdegard <f91-men@nada.kth.se>
+Source0:	ftp://ptah.lnf.kth.se/pub/qps/%{name}-%{version}.tar.gz
+URL:		http://www.student.nada.kth.se/~f91-men/qps/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-URL: http://www.student.nada.kth.se/~f91-men/qps/
-Docdir: /usr/doc
-Packager: Jochem Wichers Hoeth <wiho@chem.uva.nl>
+
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
-Qps is a visual process manager, an X11 version of "top" or "ps"
-that displays processes in a window and lets you sort and manipulate
-them. 
+Qps is a visual process manager, an X11 version of "top" or "ps" that
+displays processes in a window and lets you sort and manipulate them.
 
 %prep
-%setup
-%patch -p1
+%setup -q
 
 %build
 make
 
 %install
-if [ -d $RPM_BUILD_ROOT ]; then rm -r $RPM_BUILD_ROOT ; fi
-mkdir -p $RPM_BUILD_ROOT/usr/X11R6/bin
-mkdir -p $RPM_BUILD_ROOT/usr/X11R6/man/man1
-install -s -m 755 -o 0 -g 0 qps $RPM_BUILD_ROOT/usr/X11R6/bin
-install -m 444 -o 0 -g 0 qps.1 $RPM_BUILD_ROOT/usr/X11R6/man/man1
+rm -r $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+
+install -s qps $RPM_BUILD_ROOT%{_bindir}
+
+install qps.1 $RPM_BUILD_ROOT%{_mandir}/man1
+
+gzip -9nf CHANGES README \
+	$RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-/usr/X11R6/bin/qps
-/usr/X11R6/man/man1/qps.1
-%doc CHANGES COPYING README
+%defattr(644,root,root,755)
+%doc CHANGES README
+%attr(755,root,root) %{_bindir}/qps
+%{_mandir}/man1/*
