@@ -1,0 +1,7 @@
+
+- added using CVS keywords in %changelog (for automating them).
+
+* Thu Jan 14 1999 Jochem Wichers Hoeth <wiho@chem.uva.nl>
+- update to qps 1.6
+* Mon Jan 04 1999 Jochem Wichers Hoeth <wiho@chem.uva.nl>
+- first build
