@@ -5,11 +5,6 @@ Version:	1.9.7
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(es):	X11/Aplicaciones
-Group(pl):	X11/Aplikacje
-Group(pt_BR):	X11/Aplicações
-Group(pt):	X11/Aplicações
 Vendor:		Mattias Engdegard <f91-men@nada.kth.se>
 Source0:	ftp://ptah.lnf.kth.se/pub/qps/%{name}-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
