@@ -41,9 +41,3 @@ rm -rf $RPM_BUILD_ROOT
 /usr/X11R6/bin/qps
 /usr/X11R6/man/man1/qps.1
 %doc CHANGES COPYING README
-
-%changelog
-* Thu Jan 14 1999 Jochem Wichers Hoeth <wiho@chem.uva.nl>
-- update to qps 1.6
-* Mon Jan 04 1999 Jochem Wichers Hoeth <wiho@chem.uva.nl>
-- first build
