@@ -1,0 +1,10 @@
+--- qps-1.9.7/infobar.C.orig	Tue Feb 29 00:15:05 2000
++++ qps-1.9.7/infobar.C	Fri Dec 28 15:17:54 2001
+@@ -4,6 +4,7 @@
+ // Author: Mattias Engdegård, 1997-1999
+ 
+ #include <stdio.h>
++#include <time.h>
+ #include <qframe.h>
+ #include <qbrush.h>
+ #include <qdrawutil.h>
