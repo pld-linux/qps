@@ -1,0 +1,3 @@
+- added makefile patch (partialy fixes building)
+- some other fixes
+- NOTE: fails while building
