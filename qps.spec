@@ -10,7 +10,7 @@ Copyright: GPL
 Group: X11/Utilities
 Source: ftp://ptah.lnf.kth.se/pub/qps/qps-%{ver}.tar.gz
 Patch: qps-Makefile.patch
-BuildRoot: /tmp/%{name}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 URL: http://www.student.nada.kth.se/~f91-men/qps/
 Docdir: /usr/doc
 Packager: Jochem Wichers Hoeth <wiho@chem.uva.nl>
