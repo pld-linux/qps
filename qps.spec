@@ -1,5 +1,5 @@
 Summary:	A visual process manager
-Summary(pl):	Wizualny menad¿er procesów
+Summary(pl):	Wizualny zarz±dca procesów
 Name:		qps
 Version:	1.9.7
 Release:	2
@@ -21,9 +21,9 @@ Qps is a visual process manager, an X11 version of "top" or "ps" that
 displays processes in a window and lets you sort and manipulate them.
 
 %description -l pl
-Qps to wizualny menad¿er procesów, czyli wersja X11 programów "top"
-lub "ps", wy¶wietlaj±cy procesy w okienku i pozwalaj±cy je sortowaæ
-oraz manipulowaæ nimi.
+Qps to graficzny program do zarz±dzania procesami, czyli wersja X11
+programów "top" lub "ps", wy¶wietlaj±cy procesy w okienku i
+pozwalaj±cy je sortowaæ oraz nimi manipulowaæ.
 
 %prep
 %setup -q
