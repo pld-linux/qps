@@ -21,7 +21,7 @@ displays processes in a window and lets you sort and manipulate them.
 %setup -q
 
 %build
-make
+%{__make}
 
 %install
 rm -r $RPM_BUILD_ROOT
