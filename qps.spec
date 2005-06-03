@@ -1,16 +1,15 @@
 Summary:	A visual process manager
 Summary(pl):	Wizualny zarz±dca procesów
 Name:		qps
-Version:	1.9.7
-Release:	2
+Version:	1.9.10
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Vendor:		Mattias Engdegard <f91-men@nada.kth.se>
-Source0:	ftp://ptah.lnf.kth.se/pub/qps/%{name}-%{version}.tar.gz
-# Source0-md5:	2460d5d380466ff186d749e3cf89164e
-Patch0:		%{name}-makefile.patch
-Patch1:		%{name}-time.patch
-URL:		http://www.student.nada.kth.se/~f91-men/qps/
+Source0:	http://kldp.net/frs/download.php/2298/%{name}-%{version}.tar.gz
+# Source0-md5:	fd97332222cbcd30e79c8595f736e051
+URL:		http://qps.kldp.net/
+BuildRequires:	qmake
 BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,11 +25,12 @@ pozwalaj±cy je sortowaæ oraz nimi manipulowaæ.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %build
-%{__make}
+qmake
+sed -i -e 's/-lqt/-lqt-mt/' Makefile
+%{__make}\
+	QTDIR=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -44,6 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README
+%doc CHANGES README_INSTALL
 %attr(755,root,root) %{_bindir}/qps
 %{_mandir}/man1/*
