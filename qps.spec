@@ -1,13 +1,13 @@
 Summary:	A visual process manager
 Summary(pl):	Wizualny zarz±dca procesów
 Name:		qps
-Version:	1.9.11
+Version:	1.9.14
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Vendor:		Mattias Engdegard <f91-men@nada.kth.se>
-Source0:	http://kldp.net/frs/download.php/2930/%{name}-%{version}.tar.gz
-# Source0-md5:	c094cd755ebe5f1c923f5ede5e96affc
+Source0:	http://kldp.net/frs/download.php/3267/%{name}-%{version}.tar.gz
+# Source0-md5:	6c45c290670e8dc938afad1cd013ef81
 URL:		http://qps.kldp.net/
 BuildRequires:	qmake
 BuildRequires:	qt-devel
