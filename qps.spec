@@ -1,5 +1,5 @@
 Summary:	A visual process manager
-Summary(pl.UTF-8):   Wizualny zarządca procesów
+Summary(pl.UTF-8):	Wizualny zarządca procesów
 Name:		qps
 Version:	1.9.18.6
 Release:	1
