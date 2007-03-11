@@ -1,7 +1,7 @@
 Summary:	A visual process manager
 Summary(pl.UTF-8):	Wizualny zarządca procesów
 Name:		qps
-Version:	1.9.18.6
+Version:	1.9.19
 Release:	1
 License:	GPL
 Group:		X11/Applications
@@ -23,11 +23,10 @@ programów "top" lub "ps", wyświetlający procesy w okienku i
 pozwalający je sortować oraz nimi manipulować.
 
 %prep
-%setup -q
+%setup -q -n qps-1.9.18.6
 
 %build
 qmake
-sed -i -e 's/-lqt/-lqt-mt/' Makefile
 %{__make}\
 	QTDIR=%{_prefix}
 
