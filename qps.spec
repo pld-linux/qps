@@ -5,13 +5,13 @@ Version:	1.9.19
 Release:	1
 License:	GPL
 Group:		X11/Applications
+#Source0Download:	http://kldp.net/frs/?group_id=592
 Source0:	http://kldp.net/frs/download.php/3550/%{name}-%{version}.tar.gz
 # Source0-md5:	a55fabf362991fd13d43e930209927ea
 URL:		http://qps.kldp.net/
 BuildRequires:	qmake
 BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Qps is a visual process manager, an X11 version of "top" or "ps" that
