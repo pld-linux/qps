@@ -6,18 +6,18 @@
 Summary:	A visual process manager
 Summary(pl.UTF-8):	Wizualny zarządca procesów
 Name:		qps
-Version:	2.12.0
+Version:	2.13.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	https://github.com/lxqt/qps/releases/download/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	f086f0e88a1a8fe7425704d01a97680c
+# Source0-md5:	554ada593b7d19f6d3a81cc493682a14
 URL:		https://lxqt-project.org
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
 BuildRequires:	cmake >= 3.18.0
-BuildRequires:	liblxqt-devel >= 2.3.0
-BuildRequires:	liblxqt-devel >= 2.3.0
-BuildRequires:	lxqt-build-tools >= 2.3.0
+BuildRequires:	liblxqt-devel >= 2.4.0
+BuildRequires:	liblxqt-devel >= 2.4.0
+BuildRequires:	lxqt-build-tools >= 2.4.0
 BuildRequires:	qt6-linguist >= %{qtver}
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
@@ -67,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/qps
 %{_mandir}/man1/*
 %{_desktopdir}/qps.desktop
-%{_iconsdir}/hicolor/48x48/apps/qps.png
+%{_iconsdir}/hicolor/scalable/apps/qps.svg
 %{_datadir}/metainfo/org.lxqt.Qps.appdata.xml
 %dir %{_datadir}/qps
 # required for the lang files
